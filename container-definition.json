@@ -1,0 +1,17 @@
+[  {    "name": "demo-container",    "image": "to-do-app1",    "portMappings": [      {        "containerPort": 80,        "protocol": "tcp"      }    ],
+    "environment": [
+      {
+        "name": "NODE_ENV",
+        "value": "production"
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "/ecs/demo-container",
+        "awslogs-region": "ap-south-1",
+        "awslogs-stream-prefix": "ecs"
+      }
+    }
+  }
+]
